@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface SaarlandIconProps {
   partial?: boolean;
@@ -37,58 +37,56 @@ const saarlandCoords: [number, number][] = [
   [6.371419906616268, 49.548011779785156],
   [6.608709812164477, 49.52021026611328],
   [6.939819812774772, 49.63912200927746],
-  [7.037960052490462, 49.64337921142578]
+  [7.037960052490462, 49.64337921142578],
 ];
 
-const SaarlandIcon: React.FC<SaarlandIconProps> = ({ partial = false, opacity = 1 }) => {
+const SaarlandIcon: React.FC<SaarlandIconProps> = ({
+  partial = false,
+  opacity = 1,
+}) => {
   const createSVGPath = () => {
-    const lons = saarlandCoords.map(coord => coord[0]);
-    const lats = saarlandCoords.map(coord => coord[1]);
-    
+    const lons = saarlandCoords.map((coord) => coord[0]);
+    const lats = saarlandCoords.map((coord) => coord[1]);
+
     const minLon = Math.min(...lons);
     const maxLon = Math.max(...lons);
     const minLat = Math.min(...lats);
     const maxLat = Math.max(...lats);
-    
+
     const lonRange = maxLon - minLon;
     const latRange = maxLat - minLat;
-    
+
     // SVG-Dimensions
     const width = 50;
     const height = 60;
     const padding = 2;
-    
+
     const points = saarlandCoords.map((coord, index) => {
       const lon = coord[0];
       const lat = coord[1];
-      
+
       const x = ((lon - minLon) / lonRange) * (width - 2 * padding) + padding;
       const y = ((maxLat - lat) / latRange) * (height - 2 * padding) + padding;
-      
+
       return index === 0 ? `M ${x} ${y}` : `L ${x} ${y}`;
     });
-    
-    return points.join(' ') + ' Z';
+
+    return points.join(" ") + " Z";
   };
 
   const pathData = createSVGPath();
   const clipId = `clip-${Math.random().toString(36).substr(2, 9)}`;
 
   return (
-    <svg 
-      viewBox="0 0 50 60" 
+    <svg
+      viewBox="0 0 50 60"
       xmlns="http://www.w3.org/2000/svg"
       className="w-14 h-16 md:w-16 md:h-20"
     >
       {partial && (
         <defs>
           <clipPath id={clipId}>
-            <rect 
-              x="0" 
-              y="0" 
-              width="50" 
-              height={60 * opacity} 
-            />
+            <rect x="0" y="0" width="50" height={60 * opacity} />
           </clipPath>
         </defs>
       )}

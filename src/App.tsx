@@ -1,5 +1,5 @@
-import React from 'react';
-import AreaConverter from './components/AreaConverter';
+import React from "react";
+import AreaConverter from "./components/AreaConverter";
 
 function App() {
   return (
