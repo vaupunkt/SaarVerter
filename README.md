@@ -1,4 +1,4 @@
-# 🗺️ Strangevert - Saarland Area Calculator
+# 🗺️ SaarVerter - Saarland Area Calculator
 
 A React web application for converting area measurements into "Saarlands" - the ultimate German unit of comparison!
 
@@ -63,7 +63,7 @@ Optimized files will be in the `build/` folder.
 ## 📁 Project Structure
 
 ```
-strangevert/
+SaarVerter/
 ├── public/
 │   └── index.html
 ├── src/
