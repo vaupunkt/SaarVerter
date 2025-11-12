@@ -94,10 +94,10 @@ const AreaConverter: React.FC = () => {
 
   const formatSaarlandValue = (value: number): string => {
     if (value === 0) return "0";
-    if (value < 0.000001) return value.toExponential(2);
-    if (value < 0.01) return value.toFixed(8);
-    if (value < 1) return value.toFixed(6);
-    if (value < 100) return value.toFixed(4);
+    if (value < 0.000001) return value.toLocaleString("de-DE", { notation: "scientific", maximumFractionDigits: 2 });
+    if (value < 0.01) return value.toLocaleString("de-DE", { minimumFractionDigits: 8, maximumFractionDigits: 8 });
+    if (value < 1) return value.toLocaleString("de-DE", { minimumFractionDigits: 6, maximumFractionDigits: 6 });
+    if (value < 100) return value.toLocaleString("de-DE", { minimumFractionDigits: 4, maximumFractionDigits: 4 });
     return value.toLocaleString("de-DE", { maximumFractionDigits: 2 });
   };
 
