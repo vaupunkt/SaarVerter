@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/saarverter/static/css/main.c7f23b6b.css",
+    "main.js": "/saarverter/static/js/main.1d407902.js",
+    "index.html": "/saarverter/index.html",
+    "main.c7f23b6b.css.map": "/saarverter/static/css/main.c7f23b6b.css.map",
+    "main.1d407902.js.map": "/saarverter/static/js/main.1d407902.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c7f23b6b.css",
+    "static/js/main.1d407902.js"
+  ]
+}
