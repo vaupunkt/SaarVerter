@@ -50,6 +50,8 @@ Optimized files will be in the `build/` folder.
 **Area of Saarland**: 2,569.69 km²  
 (Source: Statistical Office of Saarland)
 
+**GeoJSON Data**: Saarland shape coordinates from [deutschlandGeoJSON](https://github.com/isellsoap/deutschlandGeoJSON)
+
 ## 🛠️ Tech Stack
 
 - **React 18** with TypeScript
@@ -74,7 +76,6 @@ strangevert/
 │   ├── App.tsx                     # Root component
 │   ├── index.tsx                   # Entry point
 │   └── index.css                   # Global styles + animations
-├── germany.geo.json                # Source GeoJSON data
 ├── package.json
 └── tsconfig.json
 ```
@@ -100,14 +101,6 @@ strangevert/
 - Touch-optimized interface
 - Adaptive font sizes and spacing
 - Vertical layout on mobile, horizontal split on desktop
-
-## 📝 License
-
-MIT
-
-## 🤝 Contributions
-
-Contributions are welcome! Feel free to create issues or submit pull requests.
 
 ---
 
